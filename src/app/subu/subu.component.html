@@ -1,0 +1,20 @@
+<button [disabled]="isUnchanged">Cancel is disabled</button><br><br>
+
+<input #subu placeholder="Enter Anything !!" (dblclick)="dblClick($event)" (keyup)="printAsYouWrite(subu.value)"
+       (blur)="subu.value=''"><br>
+
+<!--Example of Two way binding with ngModel-->
+<label>
+  <input [(ngModel)]="hero"/><br>
+</label><br>
+
+<!--Event binding-->
+<button (click)="onClick(subu.value)">Call</button><br><br>
+<label>{{values}}</label><br><br>
+
+<!--Interpolation-->
+<label>You have entered: {{hero}}</label><br><br>
+
+<!--Two way binding between parent and child.. left one is child and right one is parent-->
+<app-subu-child [childName]="hero"></app-subu-child>
+<label>{{cName}}</label>

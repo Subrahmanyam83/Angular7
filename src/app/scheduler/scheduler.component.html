@@ -1,0 +1,14 @@
+
+
+<h1>{{title}}</h1>
+
+<form #userlogin = "ngForm" (ngSubmit) = "clickGetUsers(userlogin.value)" >
+  <label class ="plabel">Project Name: </label>
+  <input class = "pname" type = "text" name = "pname" placeholder = "Enter Project Name" style="font-style:italic" ngModel>
+  <br/><br>
+  Environment Name: <input class ="ename" type = "text" name = "ename" placeholder = "Enter Environment Name" style="font-style:italic" ngModel>
+  <br/><br>
+  <input class ="getusers" type = "submit" value = "Get Users">
+</form>
+<router-outlet></router-outlet>
+

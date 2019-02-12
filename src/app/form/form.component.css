@@ -1,0 +1,17 @@
+.container {
+  alignment: center;
+  align-self: center;
+  align-items: center;
+  size: initial;
+  width: auto;
+}
+
+.is-invalid{
+  border-left: 5px solid #a94442; /* red */
+}
+.is-valid{
+  border-left: 5px solid #42A948; /* green */
+
+}
+
+

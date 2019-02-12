@@ -1,0 +1,38 @@
+Favorite Color: <label>
+  <input #field type="text" (keyup)="click(field.value)" (dblclick)="field.value=''" (ngSubmit)="onSubmit()">
+</label><br><br>
+
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="well well-lg">
+
+      <h5> Sample Form</h5>
+
+      <form class="form-group" name="profileForm" [formGroup]="profileForm">
+
+
+        <label>First Name:
+          <input class="form-control" type="text" formControlName="firstName"
+                 [ngClass]="{'is-valid':profileForm.get('firstName').touched && !profileForm.get('firstName').invalid}"
+              />
+        </label><br>
+
+        <div *ngIf="profileForm.get('firstName').touched && profileForm.get('firstName').invalid">
+          <div  [ngClass]="{'is-invalid valid':profileForm.get('firstName').touched && !profileForm.get('firstName').invalid}"
+                class="alert alert-danger" *ngIf="profileForm.get('firstName').errors.required">Field requires an input</div>
+          <div class="alert alert-danger" *ngIf="profileForm.get('firstName').errors.pattern">Field requires an input</div>
+        </div>
+
+
+        <label>Last Name:
+          <input class="form-control" type="text" formControlName="lastName">
+        </label><br>
+
+        <button data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"
+                type="submit" [disabled]="!profileForm.valid"> Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
