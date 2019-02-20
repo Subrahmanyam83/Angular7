@@ -1,42 +1,47 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+<label>
+  <input #myval [ngModel]="name" (ngModelChange)="setUppercase(myval.value)">
+</label>
+
+
+<label>
+  <input  [ngModel]="name1" >
+</label>
+
 <!--<div class="jumbotron">-->
-<div class="container">
+<!--<div class="container">-->
 
-  <div class="form-row justify-content-md-start">
-    <div class="form-group-items">
-      <form name="form">
+<!--<div class="form-row justify-content-md-start">-->
+<!--<div class="form-group-items">-->
+<!--<form name="form">-->
 
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name">
-        </div>
+<!--<div class="form-group">-->
+<!--<label for="name">Name</label>-->
+<!--<input type="text" class="form-control" id="name">-->
+<!--</div>-->
 
-        <div class="form-group">
-          <label for="alterEgo">Alter Ego</label>
-          <input type="text" class="form-control" id="alterEgo">
-        </div>
+<!--<div class="form-group">-->
+<!--<label for="alterEgo">Alter Ego</label>-->
+<!--<input type="text" class="form-control" id="alterEgo">-->
+<!--</div>-->
 
-        <button type="submit" class="btn btn-success">Submit</button>
+<!--<button type="submit" class="btn btn-success">Submit</button>-->
 
-      </form>
+<!--</form>-->
 
-    </div>
-  </div>
-</div><br><br>
+<!--</div>-->
+<!--</div>-->
+<!--</div><br><br>-->
 
-    <nav>
-      <a routerLink="/heroes">Heroes</a>
-    </nav><br><br>
+<!--<button (click)="onSave($event)">Save</button>-->
+
+<!--<nav>-->
+<!--<a routerLink="/heroes">Heroes</a>-->
+<!--</nav><br><br>-->
 
 
-    <app-form></app-form>
+<!--<app-form></app-form>-->
 
-    <!--<app-subu></app-subu>-->
+<!--<app-subu></app-subu>-->
 
-    <router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
 

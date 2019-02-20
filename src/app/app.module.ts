@@ -9,6 +9,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { SubuComponent } from './subu/subu.component';
 import { SubuChildComponent } from './subu-child/subu-child.component';
 import { FormComponent } from './form/form.component';
+import { SizerComponent } from './sizer/sizer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormComponent } from './form/form.component';
     GetUsersComponent,
     SubuComponent,
     SubuChildComponent,
-    FormComponent
+    FormComponent,
+    SizerComponent
   ],
   imports: [
     BrowserModule,
